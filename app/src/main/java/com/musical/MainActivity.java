@@ -2,13 +2,14 @@ package com.musical;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.ListView;
+
+
+import com.musical.Adapter.SongsAdapter;
+import com.musical.Songs.AddSongs;
 
 import java.util.ArrayList;
 
