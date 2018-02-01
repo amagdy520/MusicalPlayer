@@ -8,7 +8,9 @@
     <!--Song Item-->
     <string name="song_name_placeholder">Song Name</string>
     <string name="song_author_placeholder">Song Author</string>
-    <string name="song_description_placeholder">This is Song Description.\n\Here Will Found Words About Author.\n\</string>
+    <string name="song_description_placeholder">This is Song Description.\n\Here Will Found Words About Author.\n\Also You Will Found
+    The Other Albums Name For This Author.
+    </string>
     <!--Player-->
     <string name="player_now_playing">Now Playing</string>
     <string name="player_play">Play Song</string>
