@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Musical</string>
+    <!--Song Details-->
+    <string name="song_details_similar_songs">Similar Songs</string>
+    <string name="song_details_content_description_album_art">The album\'s cover art</string>
+    <string name="song_details_play_now">Play Now</string>
+
+    <!--Song Item-->
+    <string name="song_name_placeholder">Song Name</string>
+    <string name="song_author_placeholder">Song Author</string>
+    <string name="song_description_placeholder">This is Song Description.\n\Here Will Found Words About Author.\n\</string>
+    <!--Player-->
+    <string name="player_now_playing">Now Playing</string>
+    <string name="player_play">Play Song</string>
+    <string name="player_previous">Go to the previous song</string>
+    <string name="player_next">Go to the next song</string>
+
+    <!--Add Songs-->
+    <string name="add_songs_from_device">Add songs from your device</string>
+    <string name="add_songs_from_store">Buy songs online</string>
+    <string name="add_songs_scan_device">Scan device</string>
+    <string name="add_songs_store_name_placeholder">Store Name</string>
+    <string name="add_songs_store_url_placeholder">http://musicstore.com</string>
+    <string name="add_songs_store_description_placeholder">Hundreds of albums from great artists</string>
 </resources>
