@@ -7,7 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.musical.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +21,16 @@
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:textSize="26sp"
+            android:padding="10dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFECB3"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:text="@string/song_list_description" />
     </android.support.design.widget.AppBarLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,14 +60,13 @@
             <include layout="@layout/player" />
         </LinearLayout>
     </LinearLayout>
-
     <android.support.design.widget.FloatingActionButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/add"
         android:id="@+id/add_songs"
-        android:layout_gravity="center_vertical|left"
-        android:layout_marginRight="16dp"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="40dp"
         app:layout_anchor="@+id/linearLayout"
         app:layout_anchorGravity="top|right"

@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.musical.Songs.SongDetails"
     android:background="@color/play_dark"
+    android:orientation="vertical"
     >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/play_dark"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/song_details"
+            android:textSize="26sp"
+            android:padding="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFECB3"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:text="@string/song_details_description" />
+    </android.support.design.widget.AppBarLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1"
+        android:id="@+id/linearLayout"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
         <ScrollView
@@ -114,7 +140,6 @@
 
             </LinearLayout>
         </ScrollView>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -124,4 +149,16 @@
             <include layout="@layout/player" />
         </LinearLayout>
     </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/add"
+        android:id="@+id/add_songs"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="top|right"
+        app:backgroundTint="@color/play"
+        />
 </android.support.design.widget.CoordinatorLayout>

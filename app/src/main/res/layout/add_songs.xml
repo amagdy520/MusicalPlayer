@@ -8,6 +8,30 @@
     tools:context="com.musical.Songs.AddSongs"
     android:background="@color/play"
     >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/play_dark"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:textSize="26sp"
+            android:padding="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFECB3"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:text="@string/add_songs_description" />
+    </android.support.design.widget.AppBarLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
