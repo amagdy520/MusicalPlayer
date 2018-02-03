@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.musical.Adapter.SongsAdapter;
 import com.musical.Songs.AddSongs;
+import com.musical.Songs.SongsArrayList;
 
 import java.util.ArrayList;
 
@@ -21,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         String songName = getResources().getString(R.string.song_name_placeholder);
         String songAuthor = getResources().getString(R.string.song_author_placeholder);
+        SongsArrayList songsArrayList = new SongsArrayList(songName,songAuthor);
         int songsCount = 50;
         int i = 0;
         ArrayList<String[]> songsList = new ArrayList<>();
         while( i < songsCount){
-            String[] song = new String[]{ songName, songAuthor};
+            String[] song = new String[]{ songsArrayList.getSongName(), songsArrayList.getAuthorName()};
             songsList.add(i, song);
             i++;
         }

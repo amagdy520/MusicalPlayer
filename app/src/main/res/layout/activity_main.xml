@@ -61,8 +61,8 @@
         </LinearLayout>
     </LinearLayout>
     <android.support.design.widget.FloatingActionButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/floatingButton"
+        android:layout_height="@dimen/floatingButton"
         android:src="@drawable/add"
         android:id="@+id/add_songs"
         android:layout_gravity="center_vertical|start"

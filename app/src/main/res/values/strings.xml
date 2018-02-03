@@ -38,4 +38,5 @@
          from your device storage. You will also see a list of online music store where you can buy
         songs.</string>
     <string name="add">Add Songs</string>
+    <string name="openStore">Open the online store</string>
 </resources>
