@@ -7,31 +7,31 @@ import com.musical.R;
  */
 
 public class SongsArrayList {
-    private String SongName =  String.valueOf(R.string.song_name_placeholder);
-    private String AuthorName = String.valueOf(R.string.song_author_placeholder);
+    private String songName =  String.valueOf(R.string.song_name_placeholder);
+    private String authorName = String.valueOf(R.string.song_author_placeholder);
 
     public SongsArrayList(){
 
     }
-    public SongsArrayList(String SongName,String AuthorName)
+    public SongsArrayList(String songName,String authorName)
     {
-        this.SongName = SongName;
-        this.AuthorName = AuthorName;
+        this.songName = songName;
+        this.authorName = authorName;
     }
 
     public String getSongName() {
-        return SongName;
+        return songName;
     }
 
     public void setSongName(String songName) {
-        this.SongName = songName;
+        this.songName = songName;
     }
 
     public String getAuthorName() {
-        return AuthorName;
+        return authorName;
     }
 
     public void setAuthorName(String authorName) {
-        this.AuthorName = authorName;
+        this.authorName = authorName;
     }
 }

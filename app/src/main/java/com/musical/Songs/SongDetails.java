@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.musical.MainActivity;
 import com.musical.R;
 
 /**
@@ -31,5 +32,9 @@ public class SongDetails extends AppCompatActivity {
         Intent songDetails = new Intent(this, SongDetails.class);
         startActivity(songDetails);
         finish();
+    }
+    public void backMain(View view){
+        Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(mainActivity);
     }
 }
