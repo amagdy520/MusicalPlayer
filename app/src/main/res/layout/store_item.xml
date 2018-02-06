@@ -3,19 +3,18 @@
     android:id="@+id/store_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="@color/play"
     android:onClick="openStore"
     android:orientation="horizontal"
     android:paddingBottom="16dp"
-    android:paddingTop="16dp"
-    android:layout_marginBottom="10dp"
-    android:background="@color/play"
-    >
+    android:paddingTop="16dp">
 
     <ImageView
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginEnd="8dp"
         android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/image_placeholder_dark" />
 
     <LinearLayout

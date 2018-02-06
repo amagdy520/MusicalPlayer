@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ListView;
 
 
-import com.musical.Adapter.SongsAdapter;
+import com.musical.Adapter.MyClassAdapter;
 import com.musical.Songs.AddSongs;
 import com.musical.Songs.SongsArrayList;
 
@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity {
         SongsArrayList songsArrayList = new SongsArrayList(songName,songAuthor);
         int songsCount = 50;
         int i = 0;
-        ArrayList<String[]> songsList = new ArrayList<>();
+        ArrayList<SongsArrayList> songsList = new ArrayList<>();
         while( i < songsCount){
-            String[] song = new String[]{ songsArrayList.getSongName(), songsArrayList.getAuthorName()};
+            SongsArrayList song = new SongsArrayList(songName,songAuthor);
             songsList.add(i, song);
             i++;
         }
         songList = (ListView) findViewById(R.id.songs_list);
-        songList.setAdapter(new SongsAdapter(this, songsList ));
+        songList.setAdapter(new MyClassAdapter(this,0, songsList ));
 
 
         FloatingActionButton addSongsFab = (FloatingActionButton) findViewById(R.id.add_songs);

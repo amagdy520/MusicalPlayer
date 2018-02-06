@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.musical.MainActivity"
     android:orientation="vertical"
-    >
+    tools:context="com.musical.MainActivity">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/play_dark"
         android:gravity="center"
-        android:paddingTop="20dp"
-        >
+        android:paddingTop="20dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="26sp"
             android:padding="10dp"
-            />
+            android:text="@string/app_name"
+            android:textSize="26sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFECB3"
             android:padding="16dp"
-            android:textColor="@android:color/black"
+            android:text="@string/song_list_description"
             android:textAppearance="?android:textAppearanceSmall"
-            android:text="@string/song_list_description" />
+            android:textColor="@android:color/black" />
     </android.support.design.widget.AppBarLayout>
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:id="@+id/linearLayout">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
         <ListView
@@ -46,8 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@color/play_dark"
-            >
+            android:background="@color/play_dark">
 
         </ListView>
 
@@ -60,16 +59,16 @@
             <include layout="@layout/player" />
         </LinearLayout>
     </LinearLayout>
+
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_songs"
         android:layout_width="@dimen/floatingButton"
         android:layout_height="@dimen/floatingButton"
-        android:src="@drawable/add"
-        android:id="@+id/add_songs"
         android:layout_gravity="center_vertical|start"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="40dp"
-        app:layout_anchor="@+id/linearLayout"
-        app:layout_anchorGravity="top|right"
+        android:src="@drawable/add"
         app:backgroundTint="@color/play"
-        />
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="top|right" />
 </android.support.design.widget.CoordinatorLayout>

@@ -3,16 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#212121"
+    android:backgroundTint="@color/play"
     android:gravity="center"
     android:paddingBottom="16dp"
-    android:paddingTop="8dp"
-    android:backgroundTint="@color/play"
-    >
+    android:paddingTop="8dp">
+
     <ImageView
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/image_placeholder_dark" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

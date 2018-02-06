@@ -1,81 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.musical.Songs.SongDetails"
     android:background="@color/play_dark"
     android:orientation="vertical"
-    >
+    tools:context="com.musical.Songs.SongDetails">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/play_dark"
         android:gravity="center"
-        android:paddingTop="20dp"
-        >
+        android:paddingTop="20dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/song_details"
-                android:textSize="26sp"
-                android:padding="10dp"
                 android:layout_centerInParent="true"
-                />
+                android:padding="10dp"
+                android:text="@string/song_details"
+                android:textSize="26sp" />
+
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_redo"
-                android:background="@color/play_dark"
                 android:layout_centerVertical="true"
-                android:padding="10dp"
                 android:layout_marginStart="10dp"
+                android:background="@color/play_dark"
                 android:onClick="backMain"
-                />
+                android:padding="10dp"
+                android:src="@drawable/ic_action_redo" />
         </RelativeLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFECB3"
             android:padding="16dp"
-            android:textColor="@android:color/black"
+            android:text="@string/song_details_description"
             android:textAppearance="?android:textAppearanceSmall"
-            android:text="@string/song_details_description" />
+            android:textColor="@android:color/black" />
     </android.support.design.widget.AppBarLayout>
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1"
-        android:id="@+id/linearLayout"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        >
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/play_dark"
-            >
+            android:background="@color/play_dark">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:background="@color/play_dark"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -130,9 +128,9 @@
 
 
                 <TextView
-                    android:layout_marginLeft="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
                     android:text="@string/song_details_similar_songs"
                     android:textSize="18sp" />
 
@@ -148,13 +146,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="16dp"
                     android:padding="10dp"
-                    android:text="@string/song_description_placeholder"
-                    />
+                    android:paddingBottom="16dp"
+                    android:text="@string/song_description_placeholder" />
 
             </LinearLayout>
         </ScrollView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -164,16 +162,16 @@
             <include layout="@layout/player" />
         </LinearLayout>
     </LinearLayout>
+
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_songs"
         android:layout_width="@dimen/floatingButton"
         android:layout_height="@dimen/floatingButton"
-        android:src="@drawable/add"
-        android:id="@+id/add_songs"
         android:layout_gravity="center_vertical|start"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="40dp"
-        app:layout_anchor="@+id/linearLayout"
-        app:layout_anchorGravity="top|right"
+        android:src="@drawable/add"
         app:backgroundTint="@color/play"
-        />
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="top|right" />
 </android.support.design.widget.CoordinatorLayout>

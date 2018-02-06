@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.musical.Songs.AddSongs"
     android:background="@color/play"
-    >
+    tools:context="com.musical.Songs.AddSongs">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/play_dark"
         android:gravity="center"
-        android:paddingTop="20dp"
-        >
+        android:paddingTop="20dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/add"
-                android:textSize="26sp"
-                android:padding="10dp"
                 android:layout_centerInParent="true"
-                />
+                android:padding="10dp"
+                android:text="@string/add"
+                android:textSize="26sp" />
+
             <ImageButton
+                android:id="@+id/backMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_redo"
-                android:background="@color/play_dark"
                 android:layout_centerVertical="true"
-                android:padding="10dp"
                 android:layout_marginStart="10dp"
-                android:onClick="backMain"
-                />
+                android:background="@color/play_dark"
+                android:padding="10dp"
+                android:src="@drawable/ic_action_redo" />
         </RelativeLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFECB3"
             android:padding="16dp"
-            android:textColor="@android:color/black"
+            android:text="@string/add_songs_description"
             android:textAppearance="?android:textAppearanceSmall"
-            android:text="@string/add_songs_description" />
+            android:textColor="@android:color/black" />
     </android.support.design.widget.AppBarLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -61,15 +62,15 @@
                 android:layout_height="wrap_content"
                 android:background="@color/play_dark"
                 android:orientation="vertical"
-                android:paddingTop="25dp"
-                >
+                android:paddingTop="25dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/add_songs_from_device"
-                    android:textSize="18sp"
                     android:padding="16dp"
-                    />
+                    android:text="@string/add_songs_from_device"
+                    android:textSize="18sp" />
+
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
@@ -87,17 +88,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@color/play_dark"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="@string/add_songs_from_store"
-                    android:textSize="18sp"
                     android:padding="16dp"
-                    />
+                    android:text="@string/add_songs_from_store"
+                    android:textSize="18sp" />
 
                 <include layout="@layout/store_item" />
 
