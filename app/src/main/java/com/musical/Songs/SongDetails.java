@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.musical.MainActivity;
 import com.musical.R;
@@ -13,7 +15,8 @@ import com.musical.R;
  * Created by Ahmed Magdy on 1/2/2018.
  */
 public class SongDetails extends AppCompatActivity {
-
+    ImageButton imageButton;
+    LinearLayout linearLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +29,22 @@ public class SongDetails extends AppCompatActivity {
                 startActivity(addSongs);
             }
         });
-    }
-
-    public void openRelatedSong(View view){
-        Intent songDetails = new Intent(this, SongDetails.class);
-        startActivity(songDetails);
-        finish();
-    }
-    public void backMain(View view){
-        Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(mainActivity);
+        imageButton = (ImageButton) findViewById(R.id.backMain);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(mainActivity);
+            }
+        });
+        linearLayout = (LinearLayout) findViewById(R.id.related_song_item);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent songDetails = new Intent(SongDetails.this, SongDetails.class);
+                startActivity(songDetails);
+                finish();
+            }
+        });
     }
 }

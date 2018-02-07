@@ -33,7 +33,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:background="@color/play_dark"
-                android:onClick="backMain"
+                android:id="@+id/backMain"
                 android:padding="10dp"
                 android:src="@drawable/ic_action_redo" />
         </RelativeLayout>

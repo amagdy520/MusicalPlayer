@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="10dp"
     android:background="@color/play"
-    android:onClick="openStore"
     android:orientation="horizontal"
     android:paddingBottom="16dp"
     android:paddingTop="16dp">
